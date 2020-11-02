@@ -1,0 +1,21 @@
+Package: PubMedMining
+Title: Text-mining of the PubMed repository
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jeff",
+           family = "DIDIER",
+           role = c("aut", "cre"),
+           email = "jeff.didier.001@student.uni.lu")
+Description: Easy function for text-mining the PubMed repository based on defined sets of terms.
+    The relationship between fixterms (related to your research topic) and pubterms (terms which pivot around your research focus)
+    is calculated using the pointwise mutual information algorithm. A text file is generated with the pmi-scores for each fixterm.
+    Then for each collocation pairs (a fixterm+a pubterm), a text file is generated with related article titles and publishing years.
+    Additional Author section will follow in the next version updates.
+License: `use_mit_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+imports:
+    easyPubMed,
+    stringr
