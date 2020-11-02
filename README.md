@@ -1,5 +1,6 @@
 # pubmed_mining
 Term-based text-mining of the PubMed repository.
+Requires internet access!
 
 The function takes vectors of string as term sets for fixterms (research topic focus) and pubterms (terms which can pivot around your research focus).
 Install the function with devtools::install_github("Moshkante/pubmed_mining")
