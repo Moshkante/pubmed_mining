@@ -1,5 +1,5 @@
 Package: PubMedMining
-Title: Text-mining of the PubMed repository
+Title: Text-Mining of the PubMed Repository
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Jeff",
