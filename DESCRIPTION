@@ -11,11 +11,12 @@ Description: Easy function for text-mining the PubMed repository based on define
     is calculated using the pointwise mutual information algorithm. A text file is generated with the pmi-scores for each fixterm.
     Then for each collocation pairs (a fixterm+a pubterm), a text file is generated with related article titles and publishing years.
     Additional Author section will follow in the next version updates.
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-imports:
+Imports:
     easyPubMed,
-    stringr
+    stringr,
+    utils

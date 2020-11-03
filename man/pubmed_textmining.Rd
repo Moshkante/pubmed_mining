@@ -26,6 +26,6 @@ Additional Author section will follow in the next version updates.
 \examples{
 fixterms = c("cat", "dog")
 pubterms = c("behaviour", "diseases", "injuries", "clinical")
-output = "YOUR/DESIRED/OUTPUT/PATHWAY"
+output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 pubmed_textmining(fixterms, pubterms, output)
 }

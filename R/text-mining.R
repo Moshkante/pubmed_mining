@@ -14,7 +14,7 @@
 #' @examples
 #' fixterms = c("cat", "dog")
 #' pubterms = c("behaviour", "diseases", "injuries", "clinical")
-#' output = "YOUR/DESIRED/OUTPUT/PATHWAY"
+#' output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 #' pubmed_textmining(fixterms, pubterms, output)
 
 pubmed_textmining <- function(fixterms, pubterms, output){
@@ -84,8 +84,8 @@ pubmed_textmining <- function(fixterms, pubterms, output){
       cat(paste(" - PMI-score:",pubterms_score[i], "\n"))
     }
     #Save pmi score plus definition into txt file
-    write.table(pmi_definition, paste(fixterms[j] ,"pmi-scores.txt", sep="-"), col.names = FALSE, row.names = FALSE, quote = FALSE)
-    write.table(paste(fixterms[j], "~", pubterms, "PMI-score:", pubterms_score, sep = " "), paste(fixterms[j] ,"pmi-scores.txt", sep="-"), append=TRUE, col.names=FALSE,row.names=FALSE,sep="\t", quote=FALSE)
+    utils::write.table(pmi_definition, paste(fixterms[j], format(Sys.time(), "%H-%M-%S") ,"pmi-scores.txt", sep="-"), col.names = FALSE, row.names = FALSE, quote = FALSE)
+    utils::write.table(paste(fixterms[j], "~", pubterms, "PMI-score:", pubterms_score, sep = " "), paste(fixterms[j] ,"pmi-scores.txt", sep="-"), append=TRUE, col.names=FALSE,row.names=FALSE,sep="\t", quote=FALSE)
     cat(paste("\n"))
   }
 
@@ -130,7 +130,7 @@ pubmed_textmining <- function(fixterms, pubterms, output){
         }
         #save year and title in text files separated for collocation pairs
         filename <- paste(my_query[t], ".txt", sep="")
-        write.table(paste(my_years, my_titles, sep = " "), filename, col.names=FALSE,row.names=FALSE,sep="\t",quote=FALSE)
+        utils::write.table(paste(my_years, my_titles, sep = " "), filename, col.names=FALSE,row.names=FALSE,sep="\t",quote=FALSE)
         cat(paste(" done", "\n"))
       }
     }
