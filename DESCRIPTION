@@ -20,3 +20,7 @@ Imports:
     easyPubMed,
     stringr,
     utils
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
