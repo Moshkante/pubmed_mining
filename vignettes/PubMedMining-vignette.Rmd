@@ -31,7 +31,7 @@ This package has been created for easy and fast term-based text mining of the br
 The terms are stored as character strings in the according variables "fixterms" and "pubterms". The desired output pathway can be stored in the "output" variable.
 
 ```{r, example, eval=FALSE}
-fixterms = c("bike", "downhill")
+fixterms = "bike" #or multiple terms
 pubterms = c("dangerous", "extreme", "fast")
 output = getwd() #or "YOUR/DESIRED/PATHWAY"
 pubmed_textmining(fixterms, pubterms, output)
