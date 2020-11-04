@@ -13,7 +13,7 @@
 #' @export
 #' @examples
 #' fixterms = c("bike", "cycling")
-#' pubterms = c("speed", injuries", "helmet")
+#' pubterms = c("speed", "injuries", "helmet")
 #' output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 #' pubmed_textmining(fixterms, pubterms, output)
 

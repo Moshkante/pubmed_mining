@@ -23,3 +23,9 @@ is calculated using the pointwise mutual information algorithm. A text file is g
 Then for each collocation pairs (a fixterm + a pubterm), a text file is generated with related article titles and publishing years.
 Additional Author section will follow in the next version updates.
 }
+\examples{
+fixterms = c("bike", "cycling")
+pubterms = c("speed", "injuries", "helmet")
+output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
+pubmed_textmining(fixterms, pubterms, output)
+}
