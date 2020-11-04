@@ -24,7 +24,7 @@ Then for each collocation pairs (a fixterm + a pubterm), a text file is generate
 Additional Author section will follow in the next version updates.
 }
 \examples{
-fixterms = c("bike", "downhill")
+fixterms = "bike" #or multiple terms
 pubterms = c("dangerous", "extreme", "fast")
 output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 pubmed_textmining(fixterms, pubterms, output)
