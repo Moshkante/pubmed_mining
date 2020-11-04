@@ -12,8 +12,8 @@
 #' @return Returns text files with pmi-scores for each fixterm and text files for every collocation pairs bearing the article titles and publishing years. Authors will follow in the next version.
 #' @export
 #' @examples
-#' fixterms = c("cat", "dog")
-#' pubterms = c("behaviour", "diseases", "injuries", "clinical")
+#' fixterms = c("bike", "cycling")
+#' pubterms = c("speed", injuries", "helmet")
 #' output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 #' pubmed_textmining(fixterms, pubterms, output)
 
