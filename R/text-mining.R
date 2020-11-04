@@ -12,8 +12,8 @@
 #' @return Returns text files with pmi-scores for each fixterm and text files for every collocation pairs bearing the article titles and publishing years. Authors will follow in the next version.
 #' @export
 #' @examples
-#' fixterms = c("bike", "cycling")
-#' pubterms = c("speed", "injuries", "helmet")
+#' fixterms = c("bike", "downhill")
+#' pubterms = c("dangerous", "extreme", "fast")
 #' output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 #' pubmed_textmining(fixterms, pubterms, output)
 
@@ -85,7 +85,7 @@ pubmed_textmining <- function(fixterms, pubterms, output){
     }
     #Save pmi score plus definition into txt file
     utils::write.table(pmi_definition, paste(fixterms[j], format(Sys.time(), "%H-%M-%S") ,"pmi-scores.txt", sep="-"), col.names = FALSE, row.names = FALSE, quote = FALSE)
-    utils::write.table(paste(fixterms[j], "~", pubterms, "PMI-score:", pubterms_score, sep = " "), paste(fixterms[j] ,"pmi-scores.txt", sep="-"), append=TRUE, col.names=FALSE,row.names=FALSE,sep="\t", quote=FALSE)
+    utils::write.table(paste(fixterms[j], "~", pubterms, "PMI-score:", pubterms_score, sep = " "), paste(fixterms[j], format(Sys.time(), "%H-%M-%S"), "pmi-scores.txt", sep="-"), append=TRUE, col.names=FALSE,row.names=FALSE,sep="\t", quote=FALSE)
     cat(paste("\n"))
   }
 
