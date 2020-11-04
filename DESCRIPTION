@@ -7,9 +7,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "jeff.didier.001@student.uni.lu")
 Description: Easy function for text-mining the PubMed repository based on defined sets of terms.
-    The relationship between fixterms (related to your research topic) and pubterms (terms which pivot around your research focus)
-    is calculated using the pointwise mutual information algorithm. A text file is generated with the pmi-scores for each fixterm.
-    Then for each collocation pairs (a fixterm+a pubterm), a text file is generated with related article titles and publishing years.
+    The relationship between fix-terms (related to your research topic) and pub-terms (terms which pivot around your research focus)
+    is calculated using the pointwise mutual information algorithm (pmi). A text file is generated with the pmi-scores for each fixterm.
+    Then for each collocation pairs (a fix-term + a pub-term), a text file is generated with related article titles and publishing years.
     Additional Author section will follow in the next version updates.
 License: MIT + file LICENSE
 Encoding: UTF-8
