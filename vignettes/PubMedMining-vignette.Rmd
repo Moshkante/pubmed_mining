@@ -32,7 +32,7 @@ The terms are stored as character strings in the according variables "fixterms" 
 
 ```{r, example, eval=FALSE}
 fixterms = "bike" #or multiple terms
-pubterms = c("dangerous", "extreme", "fast")
+pubterms = c("dangerous", "extreme")
 output = getwd() #or "YOUR/DESIRED/PATHWAY"
 pubmed_textmining(fixterms, pubterms, output)
 ```

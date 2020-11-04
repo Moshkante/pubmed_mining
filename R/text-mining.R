@@ -13,7 +13,7 @@
 #' @export
 #' @examples
 #' fixterms = "bike" #or multiple terms
-#' pubterms = c("dangerous", "extreme", "fast")
+#' pubterms = c("dangerous", "extreme")
 #' output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 #' pubmed_textmining(fixterms, pubterms, output)
 
