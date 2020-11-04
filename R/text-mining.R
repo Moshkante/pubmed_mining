@@ -12,10 +12,12 @@
 #' @return Returns text files with pmi-scores for each fixterm and text files for every collocation pairs bearing the article titles and publishing years. Authors will follow in the next version.
 #' @export
 #' @examples
-#' fixterms = "bike" #or multiple terms
-#' pubterms = c("dangerous", "extreme")
+#' \dontrun{
+#' fixterms = c("bike", "downhill")
+#' pubterms = c("dangerous", "extreme", "injuries")
 #' output = getwd() #or "YOUR/DESIRED/OUTPUT/PATHWAY"
 #' pubmed_textmining(fixterms, pubterms, output)
+#' }
 
 pubmed_textmining <- function(fixterms, pubterms, output){
   #set working directory
@@ -23,6 +25,7 @@ pubmed_textmining <- function(fixterms, pubterms, output){
   output = getwd()
   cat(paste("Attention, you did not enter any output path.", "Default pathway is set to your current location.", "\n\n"))
   } else {
+    initialwd = getwd()
     setwd(output)
   }
 
@@ -137,6 +140,7 @@ pubmed_textmining <- function(fixterms, pubterms, output){
     cat(paste("\n"))
   }
   cat(paste("Results saved in", output, "\n", "Please note that pairs with pmi-score of -Inf have been skipped.", "\n"))
+  setwd(initialwd)
 }
 ###########################################################
 ### END TEXT MINING #######################################
