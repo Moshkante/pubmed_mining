@@ -22,14 +22,9 @@
 pubmed_textmining <- function(fixterms, pubterms, output){
 
   #set working directory
-initialwd = getwd()
-on.exit(setwd(initialwd))
-
   if (missing(output)) {
     output = getwd()
   cat(paste("Attention, you did not enter any output path.", "Default pathway is set to your current location.", "\n\n"))
-  } else {
-    setwd(output)
   }
 
   if (missing(pubterms) | missing(fixterms))
@@ -90,8 +85,8 @@ on.exit(setwd(initialwd))
       cat(paste(" - PMI-score:",pubterms_score[i], "\n"))
     }
     #Save pmi score plus definition into txt file
-    utils::write.table(pmi_definition, paste(fixterms[j], format(Sys.time(), "%H-%M-%S") ,"pmi-scores.txt", sep="-"), col.names = FALSE, row.names = FALSE, quote = FALSE)
-    utils::write.table(paste(fixterms[j], "~", pubterms, "PMI-score:", pubterms_score, sep = " "), paste(fixterms[j], format(Sys.time(), "%H-%M-%S"), "pmi-scores.txt", sep="-"), append=TRUE, col.names=FALSE,row.names=FALSE,sep="\t", quote=FALSE)
+    utils::write.table(pmi_definition, paste(output, fixterms[j], format(Sys.time(), "%H-%M-%S") ,"pmi-scores.txt", sep="-"), col.names = FALSE, row.names = FALSE, quote = FALSE)
+    utils::write.table(paste(fixterms[j], "~", pubterms, "PMI-score:", pubterms_score, sep = " "), paste(output, fixterms[j], format(Sys.time(), "%H-%M-%S"), "pmi-scores.txt", sep="-"), append=TRUE, col.names=FALSE,row.names=FALSE,sep="\t", quote=FALSE)
     cat(paste("\n"))
   }
 
@@ -135,7 +130,7 @@ on.exit(setwd(initialwd))
           }
         }
         #save year and title in text files separated for collocation pairs
-        filename <- paste(my_query[t], ".txt", sep="")
+        filename <- paste(output, my_query[t], ".txt", sep="")
         utils::write.table(paste(my_years, my_titles, sep = " "), filename, col.names=FALSE,row.names=FALSE,sep="\t",quote=FALSE)
         cat(paste(" done", "\n"))
       }
