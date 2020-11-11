@@ -23,7 +23,7 @@ pubmed_textmining <- function(fixterms, pubterms, output){
 
   #set working directory
   if (missing(output)) {
-    output = getwd()
+  output = getwd()
   cat(paste("Attention, you did not enter any output path.", "Default pathway is set to your current location.", "\n\n"))
   }
 
