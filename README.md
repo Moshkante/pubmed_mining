@@ -8,7 +8,7 @@ Mining results are given in text format with pointwise mutual information ('PMI'
 More features will be added in the next version.
 
 Example:  
-`fixterms = "bike" #or multiple terms    
-pubterms = c("dangerous", "extreme")  
-output = getwd() #or "YOUR/DESIRED/PATHWAY"  
-pubmed_textmining(fixterms, pubterms, output)`  
+`fixterms = "bike" #or multiple terms`    
+`pubterms = c("dangerous", "extreme")`  
+`output = getwd() #or "YOUR/DESIRED/PATHWAY"`  
+`pubmed_textmining(fixterms, pubterms, output)`
